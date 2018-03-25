@@ -1,0 +1,72 @@
+<div class="container">
+    <h1>Your Form</h1>
+
+
+    <!-- first-page -->
+    <div class=" form-row ">
+        <div class="col-md-3 mb-3 ">
+            <label for="streetName ">Street Name:</label>
+            <input type="text" disabled class="form-control " id="streetName " [ngModel]="ad.streetName " name="streetName " required>
+        </div>
+
+
+        <div class="col-md-3 mb-3 ">
+            <label>Street Number:</label>
+            <input type="number" name="streetNumber " disabled class="form-control " [ngModel]="ad.streetNumber ">
+        </div>
+        <div class="col-md-3 mb-3 ">
+            <label>City:</label>
+            <input type="text" name="city " disabled class="form-control " [ngModel]="ad.City ">
+        </div>
+        <div class="col-md-3 mb-3 ">
+            <label>Floor:</label>
+            <input disabled class="form-control " [ngModel]="ad.floor ">
+        </div>
+    </div>
+
+    <!-- second page -->
+    <div *ngIf="ad.pageNumber==2 || ad.pageNumber==3 ">
+        <div class="form-row ">
+            <div class="col-md-3 mb-3 ">
+                <label for="assetDetails ">Asset Details:</label>
+                <input name="assetDetails " type="text" disabled class="form-control " id="assetDetails " [ngModel]="ad.assetDetails " required>
+            </div>
+            <div class="col-md-3 mb-3 ">
+                <label>Furnitures:</label>
+                <input disabled class="form-control " [ngModel]="ad.furnitures ">
+            </div>
+            <div class="col-md-3 mb-3 ">
+                <label>Rooms:</label>
+                <input disabled class="form-control " [ngModel]="ad.rooms ">
+            </div>
+            <div class="col-md-3 mb-3 ">
+                <label>Pets:</label>
+                <input disabled class="form-control " [ngModel]="ad.pets ">
+            </div>
+        </div>
+
+
+    </div>
+    <!-- third page -->
+    <div *ngIf="ad.pageNumber==3 ">
+
+        <div class="form-row ">
+            <div class="col-md-3 mb-3 ">
+                <label>First Name:</label>
+                <input disabled class="form-control " [ngModel]="person.firstName ">
+            </div>
+            <div class="col-md-3 mb-3 ">
+                <label>Last Name:</label>
+                <input disabled class="form-control " [ngModel]="person.lastName ">
+            </div>
+            <div class="col-md-3 mb-3 ">
+                <label>Email:</label>
+                <input type="email" name="email " disabled class="form-control " [ngModel]="person.email ">
+            </div>
+            <div class="col-md-3 mb-3 ">
+                <label>Phone Number:</label>
+                <input type="number" disabled class="form-control " [ngModel]="person.phoneNumber ">
+            </div>
+        </div>
+    </div>
+</div>
